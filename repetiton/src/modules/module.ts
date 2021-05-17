@@ -2,4 +2,4 @@ function getName():string {
   return 'Christoffer';
 }
 
-export default getName;
+export default getName

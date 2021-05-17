@@ -139,8 +139,14 @@ var _module = _interopRequireDefault(require("./modules/module"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var name = (0, _module.default)();
-var headingElem = document.querySelector('h1');
-headingElem.innerHTML = "Hello " + name;
+var startpageElem = document.querySelector('#startpage');
+var anotherpageElem = document.querySelector('#another-page');
+var changeButton = document.querySelector('#change');
+changeButton.addEventListener('click', function () {
+  startpageElem.classList.add('hide');
+  anotherpageElem.classList.remove('hide');
+  anotherpageElem.classList.add('show');
+});
 console.log("hello world!", name);
 },{"./modules/module":"modules/module.ts"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -170,7 +176,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55329" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62947" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
